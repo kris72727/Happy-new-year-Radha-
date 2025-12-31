@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2026 | Vault of Memories</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div id="app">
+        <section class="screen active" id="welcome">
+            <div class="glass-box">
+                <h1 class="premium-text">2026</h1>
+                <p>A gate to our best moments...</p>
+                <button class="gold-glow-btn" onclick="startExperience()">Unlock Now ✨</button>
+            </div>
+        </section>
+
+        <section class="screen" id="video-reel">
+            <div class="glass-box">
+                <div class="video-wrapper">
+                    <video id="myReel" width="100%" playsinline>
+                        <source src="reel.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <button class="gold-glow-btn" onclick="showPhotos()">Next: 50 Shades of Us 📸</button>
+            </div>
+        </section>
+
+        <section class="screen" id="memories">
+            <div id="photo-canvas"></div>
+            <div class="instruction-toast">Drag photos to explore! 👇</div>
+            <div class="bottom-controls">
+                <button class="gold-glow-btn" onclick="nextScreen('music-section')">Play Our Tune 🎵</button>
+            </div>
+        </section>
+
+        <section class="screen" id="music-section">
+            <div class="glass-box">
+                <h2 class="premium-text">For You</h2>
+                <audio id="bgMusic" controls><source src="song.mp3" type="audio/mpeg"></audio>
+                <button class="gold-glow-btn" onclick="nextScreen('note')">Last Thing... ❤️</button>
+            </div>
+        </section>
+
+        <section class="screen" id="note">
+            <div class="glass-box">
+                <h2 class="premium-text">Listen Bestie! 😎</h2>
+                <div class="note-text">
+                    <p>2025 was just the trailer, 2026 mein real kaand baaki hain! 😂</p>
+                    <p>Tumhe jhelna mushkil hai par namumkin nahi. Let's work and rock together! 🚀</p>
+                </div>
+                <button class="gold-glow-btn" onclick="finalCelebration()">Happy New Year! 🥳</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
